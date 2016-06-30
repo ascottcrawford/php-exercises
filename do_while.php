@@ -1,9 +1,9 @@
 <?php
 
 
-$a = 100;
+$a = 2;
 
 do {
-	echo 'count down by 5 ' . $a . PHP_EOL;
-	$a-=5;
-} while ($a >= -10);
+	$a*=$a;
+	echo "$a" . PHP_EOL;
+} while ($a < 1000000);
