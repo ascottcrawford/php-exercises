@@ -1,10 +1,21 @@
 <?php
 
+$min = 1;
+$max = 100;
 
-if ($argc == 3) {
+
+if ($argc === 3 && is_numeric) {
 
 	$correctNumber = mt_rand($argv[1], $argv[2]);
+	$min = $argv[1];
+	$max = $argv[2];
 	$counter = 0;
+
+} else {
+	fwrite(STDERR, "You need to pass 2 numeric values");
+	exit(1); 
+
+}
 
 	fwrite(STDOUT, "Please guess a number between 1 and 100: ") . PHP_EOL;
 
@@ -26,6 +37,8 @@ if ($argc == 3) {
 
 	} while	($guessNumber !== $correctNumber);
 
-}
+	exit(0);
+
+
 
 

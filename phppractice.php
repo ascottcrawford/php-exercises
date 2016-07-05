@@ -1,13 +1,19 @@
 <?php
 
-$names = ['John', 'Bill', 'Jack', 'Jay'];
+//counters
+//accumulators
 
-var_dump($names);
+$sum = 0;
 
-var_dump($names[0] . " is the first name in the array") . PHP_EOL;
+for ($i=0; $i < 10; $i++) {
+	fwrite(STDOUT, "Enter a number: \n");
+	$number = trim(fgets(STDIN));
+	$sum += $number;
+}
 
-var_dump($names[1] . " is the second name in the array") . PHP_EOL;
+fwrite(STDOUT, "the sum of your numbers is $sum \n");
 
-var_dump($names[2] . " is the third name in the array") . PHP_EOL;
 
-var_dump($names[3] . " is the fourth name in the array") . PHP_EOL;
+
+
+
