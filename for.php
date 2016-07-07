@@ -27,3 +27,10 @@ if (!is_numeric($increment)) {
 	// 	fwrite(STDOUT, "$i\n"); 
 	// 	}
 
+
+$array = [2, 35, 6, 7, 10];
+
+foreach ($array as $key => $value) {
+	echo "\$key's value is $key" . PHP_EOL;
+	echo "\$"
+}
