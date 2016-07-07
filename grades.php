@@ -83,7 +83,9 @@ while($addStudent) {
             echo "Your average is {$avg}\n";
         }
     }
-    $addStudent = false;
+    // $addStudent = false;
+    exit(1);
+
 
 
 // $name;
