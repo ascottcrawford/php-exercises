@@ -47,14 +47,15 @@ $companies = [
 
 
 
-foreach ($companies as &$name) {
+foreach ($companies as &$name) {  //$name = &$companies[$key];
     asort($name);
 }
+
 print_r($companies);
 
 
-arsort($companies);
-print_r($companies);
+// arsort($companies);
+// print_r($companies);
 
 
 
