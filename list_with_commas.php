@@ -34,9 +34,9 @@
 $famousFakePhysicists = 'Gordon Freeman, Samantha Carter, Sheldon Cooper, Quinn Mallory, Bruce Banner, Tony Stark';
 $physicistsArray = explode(',', $famousFakePhysicists);
 print_r($physicistsArray);
-array_pop($physicistsArray);
+$last = array_pop($physicistsArray);
 print_r($physicistsArray);
-array_push($physicistsArray, " and Tony Stark");
+array_push($physicistsArray, " and $last");
 print_r($physicistsArray);
 
 $famousString = implode(',', $physicistsArray);
