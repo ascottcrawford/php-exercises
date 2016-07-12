@@ -2,17 +2,21 @@
 
 function logMessage($logLevel, $message)
 {
-    $log = [];
-    $filename = '/vagrant/sites/exercises/log-YYYY-MM-DD.log';
+	$filename = 'log-' . date('Y-m-d'). 'log';
 	$handle = fopen($filename, 'a');
-	foreach ($log as $message) {
-    fwrite($handle, PHP_EOL . $message);
-    $log = $message;
-	}
-	fclose($handle);
+	$formattedMessage = date('Y-m-d H:i:s') . " [$logLevel] $message";
+	fwrite($handle, $formattedMessage); 
+
+}
+
+function logInfo($message){
+	logMessage('INFO', $message);
+}
+function logError($message){
+	logMessage('ERROR', $message);
 }
 
 logMessage("INFO", "This is an info message.");
-logMessage("ERROR", "This is an info message.");
-var_dump($log);
+logMessage("ERROR", "This is an error message.");
+
 
