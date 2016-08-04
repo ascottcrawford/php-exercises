@@ -34,15 +34,8 @@ class Rectangle
 //     }
 // }
 
-
-// $person1 = new Superhero('TJ', 'Becker');
-// $person1->pseudonym = 'Tyrannosaurus Joe';
-// $person1->capeColor = 'Scales';
-
-
-// $person2 = new Person('Scott', 'Crawford');
-
-// echo $person1->aslterEgo() . PHP_EOL;
-// if ($person1->hasCape()) {
-
-// }
+// $person = new Person('TJ', 'Becker');
+// $superman = new Superhero ('Clark', 'Kent');
+// $superman->pseudonym = 'Superman';
+// $sueprman->capeColor = 'red';
+// echo $superman->fullName()
