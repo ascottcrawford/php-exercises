@@ -1,10 +1,19 @@
 <?php
 
+
+
 class Model
 
 {
     // Array to store our key/value data
     private $data = [];
+
+    protected static $table;
+
+    public static function getTableName() 
+    {
+    	return static::$table;
+    }
 
     // Magic setter to populate $data array
     public function __set($name, $value)
@@ -30,3 +39,5 @@ $model->name = 'name test';
 $model->group = 'group test';
 $model->date = 'date test';
 var_dump($model);
+echo Model::getTableName() . PHP_EOL;
+
