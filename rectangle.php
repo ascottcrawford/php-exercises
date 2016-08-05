@@ -3,18 +3,35 @@
 
 class Rectangle 
 {
-    public $height;
-    public $width;
+    private $height;
+    private $width;
 
     public function __construct($height, $width)
     {
         $this->height = $height;
         $this->width = $width;
     }
+    protected function setheight($height) {
+        $this->height = $height;
+    }
+    protected function setwidth($width) {
+        $this->width = $width;
+    }
+    public function getheight() {
+        return $this->height;
+    }
+    public function getwidth() {
+        return $this->width;
+    }
+
     public function area()
     {
-        return $this->height * $this->width; 
+        return $this->getheight() * $this->getwidth(); 
     }
+    
+
+
+
 }
 
 
