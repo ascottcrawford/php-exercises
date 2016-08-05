@@ -7,15 +7,39 @@ class Log
     // $log-> logInfo();
     // $log-> logError();
 
-    public $filename;
-    public $handle;
+    private $filename;
+    private $handle;
 
 
     public function __construct($prefix = 'log')
 	{
 		$this->filename = $prefix . date('Y-m-d'). '.log';
-		$this->handle = fopen($this->filename, 'a');
+		$this->openHandle();
 	}
+
+	protected function setFilename() {
+		$this->filename = settype($filename, "string");
+		
+	}
+	protected function setHandle() {
+		$this->handle = $handle;
+	}
+
+	private function openHandle()
+	{
+		if(touch($this->filename) && is_writable($this->filename)){
+			$this->handle = fopen($this->filename, 'a');
+		}
+		else {
+			echo "sorry not the file you were looking for";
+		}
+	}
+
+	// public function getFilename() {
+	// 	return  
+	// }
+	
+
 
 	public	function logMessage($logLevel, $message)
 		{
